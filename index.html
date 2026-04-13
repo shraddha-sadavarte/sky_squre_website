@@ -1309,11 +1309,18 @@
 </div>
 
 <div id="videoModal" class="fixed inset-0 z-[1100] hidden items-center justify-center bg-black/95">
-    <div class="relative w-full max-w-4xl mx-4">
-        <button onclick="closeVideoModal()" class="absolute -top-12 right-0 bg-red-600 text-white rounded-full p-3">✕</button>
-        <video id="galleryVideo" class="w-full rounded-xl" controls>
-            <source src="/assets/sky-square-tour.mp4" type="video/mp4">
-        </video>
+    <div class="relative w-full max-w-7xl mx-4">
+        <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 bg-red-600 hover:bg-red-700 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg transition-colors p-3">✕</button>
+        <div class="w-full h-full flex items-center justify-center p-4 sm:p-6">
+            <video 
+                id="galleryVideo" 
+                class="w-full h-full object-contain rounded-xl max-h-screen"
+                controls
+                autoplay
+            >
+                <source src="/assets/sky_squre_tour.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 </div>
 
