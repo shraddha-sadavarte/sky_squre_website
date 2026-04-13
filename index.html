@@ -1309,17 +1309,18 @@
 </div>
 
 <div id="videoModal" class="fixed inset-0 z-[1100] hidden items-center justify-center bg-black/95">
-    <div class="relative w-full max-w-7xl mx-4">
-        <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 bg-red-600 hover:bg-red-700 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg transition-colors p-3">✕</button>
-        <div class="w-full h-full flex items-center justify-center p-4 sm:p-6">
-            <video 
-                id="galleryVideo" 
-                class="w-full h-full object-contain rounded-xl max-h-screen"
-                controls
-                autoplay
-            >
-                <source src="/assets/sky_squre_tour.mp4" type="video/mp4">
-            </video>
+    <div class="relative w-full max-w-5xl mx-4">
+        <button onclick="closeVideoModal()" class="absolute -top-12 right-0 bg-red-600 hover:bg-red-700 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg transition-colors z-10">✕</button>
+        <div class="relative w-full" style="padding-bottom: 56.25%; height: 0;">
+            <iframe 
+                id="youtubeVideo"
+                class="absolute top-0 left-0 w-full h-full rounded-xl"
+                src="https://www.youtube.com/embed/ZoBk2qo_x6Q?si=JAp0DhKkz4TOWCz1"
+                title="SkySqure Tour Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 </div>
@@ -1480,21 +1481,31 @@ window.closeImageModal = function() {
 
 window.openVideoModal = function() {
     const modalVideo = document.getElementById('videoModal');
-    const video = document.getElementById('galleryVideo');
+    const youtubeIframe = document.getElementById('youtubeVideo');
     if (modalVideo) {
         modalVideo.classList.remove('hidden');
         modalVideo.classList.add('flex');
         document.body.classList.add('modal-open');
-        if (video) video.play().catch(e => console.log('Auto-play prevented'));
+        //autoplay when opened
+        if(youtubeIframe) {
+            const videoSrc = youtubeIframe.src;
+            youtubeIframe.src = videoSrc.replace('autoplay=0', 'autoplay=1');
+        }
     }
 }
 
 window.closeVideoModal = function() {
     const modalVideo = document.getElementById('videoModal');
-    const video = document.getElementById('galleryVideo');
-    if (modalVideo) modalVideo.classList.add('hidden');
-    if (video) video.pause();
-    document.body.classList.remove('modal-open');
+    const youtubeIframe = document.getElementById('youtubeVideo');
+    if (modalVideo){
+        modalVideo.classList.add('hidden');
+        document.body.classList.remove('modal-open');
+        //stop video when closed
+        if(youtubeIframe){
+            youtubeIframe.src = youtubeIframe.src.replace('autoplay=1', 'autoplay=0');
+        }
+    } 
+    
 }
 
 window.openFloorPlanModal = function(img, title) {
