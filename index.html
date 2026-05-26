@@ -7,6 +7,17 @@
     <meta name="description" content="Discover SkySqure in Warje, Pune. Premium hillside 2 & 3 BHK residences with world-class amenities.">
     <meta name="keywords" content="SkySqure Warje, SJ Group, 2 BHK Warje, 3 BHK Warje, New Projects Pune">
 
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="SkySqure Warje | Premium 2 & 3 BHK Homes by SJ Group">
+    <meta property="og:description" content="Discover SkySqure in Warje, Pune. Premium hillside 2 & 3 BHK residences with world-class amenities.">
+    <meta property="og:image" content="/assets/sky_squre_og.jpg">
+    <meta property="og:url" content="https://github.com/shraddha-sadavarte/sky_squre_website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SkySqure Warje | Premium 2 & 3 BHK Homes by SJ Group">
+    <meta name="twitter:description" content="Discover SkySqure in Warje, Pune. Premium hillside 2 & 3 BHK residences with world-class amenities.">
+    <meta name="twitter:image" content="/assets/sky_squre_og.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -14,6 +25,16 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <link rel="stylesheet" href="/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1QG3Q507N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-D1QG3Q507N');
+    </script>
 
 
 </head>
@@ -300,6 +321,121 @@
         </div>
     </section>
 
+     <!-- Gallery Section -->
+    <section id="gallery" class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 lg:mb-16">
+                <span class="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px]">Visual Journey</span>
+                <h2 class="heading-xl text-4xl md:text-5xl lg:text-6xl mt-4">Experience <span class="text-blue-600">SkySqure</span></h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Explore our premium residences through stunning visuals</p>
+            </div>
+
+            <div class="flex justify-center mb-8 lg:mb-12 overflow-x-auto pb-2">
+                <div class="inline-flex bg-white p-1 rounded-full shadow-md gap-1">
+                    <button onclick="filterGallery('all')" id="filter-all" class="gallery-filter-btn px-4 lg:px-6 py-2 rounded-full text-sm font-bold bg-blue-600 text-white whitespace-nowrap">All</button>
+                    <button onclick="filterGallery('exterior')" id="filter-exterior" class="gallery-filter-btn px-4 lg:px-6 py-2 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-100 whitespace-nowrap">Exterior</button>
+                    <button onclick="filterGallery('interior')" id="filter-interior" class="gallery-filter-btn px-4 lg:px-6 py-2 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-100 whitespace-nowrap">Interior</button>
+                    <button onclick="filterGallery('amenities')" id="filter-amenities" class="gallery-filter-btn px-4 lg:px-6 py-2 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-100 whitespace-nowrap">Amenities</button>
+                    <button onclick="openVideoModal()" class="px-4 lg:px-6 py-2 rounded-full text-sm font-bold bg-red-600 text-white hover:bg-red-700 whitespace-nowrap">
+                        <i data-lucide="play-circle" class="inline w-4 h-4 mr-1"></i> Video
+                    </button>
+                </div>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item exterior cursor-pointer" onclick="openImageModal('/assets/outside.jpeg', 'Exterior View')">
+                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
+                        <img src="/assets/outside.jpeg" alt="Exterior" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
+                            <div>
+                                <p class="text-white font-bold">Exterior View</p>
+                                <p class="text-white/80 text-xs">Modern architecture</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item exterior cursor-pointer" onclick="openImageModal('/assets/building.jpeg', 'Building Elevation')">
+                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
+                        <img src="/assets/building.jpeg" alt="Building" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
+                            <div>
+                                <p class="text-white font-bold">Stunning Elevation</p>
+                                <p class="text-white/80 text-xs">Glass facade</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item interior cursor-pointer" onclick="openImageModal('/assets/living_area.jpeg', 'Living Room')">
+                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
+                        <img src="/assets/living_area.jpeg" alt="Living Room" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
+                            <div>
+                                <p class="text-white font-bold">Spacious Living</p>
+                                <p class="text-white/80 text-xs">Premium interior</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item amenities cursor-pointer" onclick="openImageModal('/assets/pool.jpeg', 'Infinity Pool')">
+                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
+                        <img src="/assets/pool.jpeg" alt="Pool" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
+                            <div>
+                                <p class="text-white font-bold">Infinity Pool</p>
+                                <p class="text-white/80 text-xs">Rooftop swimming pool</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item amenities cursor-pointer" onclick="openImageModal('/assets/gym.jpeg', 'Gymnasium')">
+                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
+                        <img src="/assets/gym.jpeg" alt="Gym" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
+                            <div>
+                                <p class="text-white font-bold">Elite Gymnasium</p>
+                                <p class="text-white/80 text-xs">Modern equipment</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item amenities cursor-pointer" onclick="openImageModal('/assets/children_area.jpeg', 'Kids Play Area')">
+                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
+                        <img src="/assets/children_area.jpeg" alt="Kids Area" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
+                            <div>
+                                <p class="text-white font-bold">Kids Adventure Zone</p>
+                                <p class="text-white/80 text-xs">Safe playground</p>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Location Section -->
     <section id="location" class="py-24 lg:py-32 bg-slate-950 text-white">
             <!-- Privileges of Warje Address - Cards Section -->
@@ -567,121 +703,6 @@
                     <h5 class="font-bold text-base lg:text-lg mb-2">Swimming Pool</h5>
                     <p class="text-xs text-slate-400">Temperature-controlled pool</p>
                 </div> -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-24 lg:py-32 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 lg:mb-16">
-                <span class="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px]">Visual Journey</span>
-                <h2 class="heading-xl text-4xl md:text-5xl lg:text-6xl mt-4">Experience <span class="text-blue-600">SkySqure</span></h2>
-                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Explore our premium residences through stunning visuals</p>
-            </div>
-
-            <div class="flex justify-center mb-8 lg:mb-12 overflow-x-auto pb-2">
-                <div class="inline-flex bg-white p-1 rounded-full shadow-md gap-1">
-                    <button onclick="filterGallery('all')" id="filter-all" class="gallery-filter-btn px-4 lg:px-6 py-2 rounded-full text-sm font-bold bg-blue-600 text-white whitespace-nowrap">All</button>
-                    <button onclick="filterGallery('exterior')" id="filter-exterior" class="gallery-filter-btn px-4 lg:px-6 py-2 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-100 whitespace-nowrap">Exterior</button>
-                    <button onclick="filterGallery('interior')" id="filter-interior" class="gallery-filter-btn px-4 lg:px-6 py-2 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-100 whitespace-nowrap">Interior</button>
-                    <button onclick="filterGallery('amenities')" id="filter-amenities" class="gallery-filter-btn px-4 lg:px-6 py-2 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-100 whitespace-nowrap">Amenities</button>
-                    <button onclick="openVideoModal()" class="px-4 lg:px-6 py-2 rounded-full text-sm font-bold bg-red-600 text-white hover:bg-red-700 whitespace-nowrap">
-                        <i data-lucide="play-circle" class="inline w-4 h-4 mr-1"></i> Video
-                    </button>
-                </div>
-            </div>
-
-            <div class="gallery-grid" id="gallery-grid">
-                <div class="gallery-item exterior cursor-pointer" onclick="openImageModal('/assets/outside.jpeg', 'Exterior View')">
-                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
-                        <img src="/assets/outside.jpeg" alt="Exterior" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
-                            <div>
-                                <p class="text-white font-bold">Exterior View</p>
-                                <p class="text-white/80 text-xs">Modern architecture</p>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
-                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item exterior cursor-pointer" onclick="openImageModal('/assets/building.jpeg', 'Building Elevation')">
-                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
-                        <img src="/assets/building.jpeg" alt="Building" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
-                            <div>
-                                <p class="text-white font-bold">Stunning Elevation</p>
-                                <p class="text-white/80 text-xs">Glass facade</p>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
-                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item interior cursor-pointer" onclick="openImageModal('/assets/living_area.jpeg', 'Living Room')">
-                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
-                        <img src="/assets/living_area.jpeg" alt="Living Room" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
-                            <div>
-                                <p class="text-white font-bold">Spacious Living</p>
-                                <p class="text-white/80 text-xs">Premium interior</p>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
-                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item amenities cursor-pointer" onclick="openImageModal('/assets/pool.jpeg', 'Infinity Pool')">
-                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
-                        <img src="/assets/pool.jpeg" alt="Pool" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
-                            <div>
-                                <p class="text-white font-bold">Infinity Pool</p>
-                                <p class="text-white/80 text-xs">Rooftop swimming pool</p>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
-                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item amenities cursor-pointer" onclick="openImageModal('/assets/gym.jpeg', 'Gymnasium')">
-                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
-                        <img src="/assets/gym.jpeg" alt="Gym" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
-                            <div>
-                                <p class="text-white font-bold">Elite Gymnasium</p>
-                                <p class="text-white/80 text-xs">Modern equipment</p>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
-                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item amenities cursor-pointer" onclick="openImageModal('/assets/children_area.jpeg', 'Kids Play Area')">
-                    <div class="relative overflow-hidden rounded-xl lg:rounded-2xl shadow-lg group">
-                        <img src="/assets/children_area.jpeg" alt="Kids Area" class="w-full h-56 lg:h-72 object-cover transition-transform group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-4">
-                            <div>
-                                <p class="text-white font-bold">Kids Adventure Zone</p>
-                                <p class="text-white/80 text-xs">Safe playground</p>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3 bg-black/60 p-1.5 rounded-full">
-                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
